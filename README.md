@@ -54,10 +54,15 @@ Sample code for making Wikipedia API requests is provided in a [notebook](https:
 The ORES API (Objective Revision Evaluation Service) is a machine learning system designed to predict the quality of Wikipedia articles. ORES provides article quality estimates based on peer-reviewed quality classes, ranked as follows:
 
 FA - Featured article
+
 GA - Good article (A-Class)
+
 B - B-Class article
+
 C - C-Class article
+
 Start - Start-class article
+
 Stub - Stub-class article
 
 To get article quality predictions from ORES, we need the article’s title and the latest revid, retrieved via the Wikipedia API.
@@ -84,8 +89,11 @@ This JSON file was generated after the initial API request to the Wikipedia API 
 Second Intermediate File (**article_scores.csv**):
 
 Following the second API request to the ORES API, a CSV file was generated. This file contains two columns:
+
 article_title (string)
+
 article_quality (string)
+
 The article quality represents the predicted assessment class for each article, as returned by the ORES machine learning model.
 
 Third Intermediate File (**wp_countries-no_match.txt**):
@@ -98,10 +106,15 @@ During the merging of the Wikipedia and population datasets, some countries may 
 The final output file (**wp_politicians_by_country.csv**) was created by merging the two intermediate datasets with the population_by_country_AUG.2024.csv dataset. This merged dataframe was saved as a CSV file with the following six columns:
 
 region (String) - Region of the world where the country is located
+
 country (string) – The country associated with the politician
+
 population (integer) – The population of the politician's country
+
 article_title (string) – The name of the politician
+
 revision_id (integer) – The most recent revision ID of the Wikipedia article
+
 article_quality (string) – The predicted quality score of the article
 
 This structured format allows for seamless analysis by combining relevant metadata (e.g., article quality, country population) with the politicians' Wikipedia articles.
