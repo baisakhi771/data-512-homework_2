@@ -78,7 +78,7 @@ It’s possible that some API requests may fail. In those cases, log the article
 
 ## Data Schema and Output Files
 
-In this project, theree intermediate data files and one final output file were saved to the repository. Each file represents a different stage of the data collection and processing workflow.
+In this project, four intermediate data files and one final output file were saved to the repository. Each file represents a different stage of the data collection and processing workflow.
 
 ### Intermediate Files
 
@@ -100,6 +100,9 @@ Third Intermediate File (**wp_countries-no_match.txt**):
 
 During the merging of the Wikipedia and population datasets, some countries may not have matching entries in both datasets. This file, wp_countries-no_match.txt, is generated to list all countries that were present in the Wikipedia dataset but did not have a corresponding entry in the population dataset (or vice-versa). The countries are listed line by line, each on a separate line, as a text file.
 
+Fourth Intermediate File (**wp_countries-no_match.txt**):
+
+This has all the country names from articles file where there is no direct match in the population file's country/Geography column. But this is biased since the way the country name has been written varies. To machine they are different but if we look at them as human we know they are same countries like "GuineaBissau" in one file and "Guinea-Bissau" in other.
 
 ### Final Output File
 
