@@ -102,7 +102,7 @@ During the merging of the Wikipedia and population datasets, some countries may 
 
 Fourth Intermediate File (**wp_countries-no_match.txt**):
 
-This has all the country names from articles file where there is no direct match in the population file's country/Geography column. But this is biased since the way the country name has been written varies. To machine they are different but if we look at them as human we know they are same countries like "GuineaBissau" in one file and "Guinea-Bissau" in other.
+This has all the country names from articles file where there is no direct match in the population file's country/Geography column. But this is biased since the way the country name has been written varies. To machine they are different but if we look at them as human we know they are same countries like "GuineaBissau" in one file and "Guinea-Bissau" in other, "Korea, South" in one and "Korea (South)" in other. There are other similar examples like this.
 
 ### Final Output File
 
