@@ -96,7 +96,7 @@ article_quality (string)
 
 The article quality represents the predicted assessment class for each article, as returned by the ORES machine learning model.
 
-Third Intermediate File (**wikipedia_merged.csvt**):
+Third Intermediate File (**wikipedia_merged.csv**):
 
 This file is a composite file for politician wikipedia articles which will be merged with population data file to have the final output file. It has following columns: 
 
