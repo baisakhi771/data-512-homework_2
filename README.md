@@ -96,13 +96,17 @@ article_quality (string)
 
 The article quality represents the predicted assessment class for each article, as returned by the ORES machine learning model.
 
-Third Intermediate File (**wp_countries-no_match.txt**):
+Third Intermediate File (**wikipedia_merged.csvt**):
 
-During the merging of the Wikipedia and population datasets, some countries may not have matching entries in both datasets. This file, wp_countries-no_match.txt, is generated to list all countries that were present in the Wikipedia dataset but did not have a corresponding entry in the population dataset (or vice-versa). The countries are listed line by line, each on a separate line, as a text file.
+This file is a composite file for politician wikipedia articles which will be merged with population data file to have the final output file. It has following columns: 
+
+article_title,	revision_id,	url,	country and	article_quality
+
 
 Fourth Intermediate File (**wp_countries-no_match.txt**):
 
-This has all the country names from articles file where there is no direct match in the population file's country/Geography column. But this is biased since the way the country name has been written varies. To machine they are different but if we look at them as human we know they are same countries like "GuineaBissau" in one file and "Guinea-Bissau" in other, "Korea, South" in one and "Korea (South)" in other. There are other similar examples like this.
+During the merging of the Wikipedia and population datasets, some countries may not have matching entries in both datasets. This file, wp_countries-no_match.txt, is generated to list all countries that were present in the Wikipedia dataset but did not have a corresponding entry in the population dataset (or vice-versa). The countries are listed line by line, each on a separate line, as a text file.
+This is biased since the way the country name has been written varies. To machine they are different but if we look at them as human we know they are same countries like "GuineaBissau" in one file and "Guinea-Bissau" in other, "Korea, South" in one and "Korea (South)" in other. There are other similar examples like this.
 
 ### Final Output File
 
